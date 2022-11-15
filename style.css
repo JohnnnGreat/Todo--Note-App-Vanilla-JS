@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 210, 125);
+}
+
+.container {
+    width: 1100px;
+    margin:auto ;
+}
+
+.container nav {
+    background-color: orange;
+    padding: 13px 25px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.container .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: -20px 40px;
+}
+
+.container .buttons button {
+    padding: 20px;
+    background-color: orange;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.container .buttons button:hover {
+    background-color: rgb(255, 189, 66);
+}
+
+.addTodo  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 100;
+}
+
+.addTodo .addTodoCard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.1);
+    
+}
+
+.addTodo .addTodoCard input[type='text']{
+    padding: 15px 20px;
+    font-size: 20px;
+    border: 2px solid orange;
+}
+
+.addTodo .addTodoCard button {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: orange;
+    border: none;
+    font-size: 17px;
+    transition: all 300ms ease;
+}
+
+.addTodo .addTodoCard button:hover {
+    background-color: rgb(255, 209, 124);
+}
+
+.addNote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 100;
+}
+
+.addNote .addNoteCard  {
+    display: flex;
+    flex-direction: column;
+}
+
+.addNote .addNoteCard h2 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.addNote .addNoteCard input[type='text']{
+    padding: 15px 20px;
+    font-size: 20px;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+}
+
+.addNote .addNoteCard #textNote {
+    background-color: orange;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 16px;
+    width: initial;
+}
+
+.addNote .addNoteCard button {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: orange;
+    border: none;
+    font-size: 17px;
+    transition: all 300ms ease;
+}
+
+.addNote .addNoteCard button:hover {
+    background-color: rgb(255, 189, 66);
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.author h2 {
+    color: grey;
+    font-weight: 400;
+    font-size: 20px;
+}
+.item-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    padding: 10px;
+}
+
+.display-todo {
+    margin-top: 50px;
+    display: inline-block;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display-todo div {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 4px rgba(0, 0,0, 0.3);
+    border-radius: 4px;
+    align-items: center;
+}
+.display-note h3 {
+    background-color: rgb(215, 215, 215);
+    width: 100%;
+    padding: 10px 15px;
+}
+.display-todo p {
+    color: grey;
+}
+
+.display-todo button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    
+    
+}
+
+.display-note button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.display-todo button:hover {
+    background-color: rgb(255, 205, 112); 
+}
+
+.display-note button:hover {
+    background-color: rgb(255, 205, 112); 
+}
+
+.display-note {
+    margin-top: 50px;
+    display: inline-block;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+.display-note div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 4px rgba(0, 0,0, 0.3);
+    border-radius: 4px;
+    align-items: center;
+} 
+
+.display-note div:hover {
+    background-color: rgb(224, 224, 224);
+}
+.cover {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: .9;
+}
+#tag {
+    color: white;
+    position: absolute;
+    z-index: 300;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#error {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    display: none;
+    z-index: 10000;
+    color: white;
+}
+
+@media (max-width:600px){
+    
+
+    .container {
+        width: 100%;
+    }
+
+    .display-note p {
+        font-size: 13px;
+    }
+}
